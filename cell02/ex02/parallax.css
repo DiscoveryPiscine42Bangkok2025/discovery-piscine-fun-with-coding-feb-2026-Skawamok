@@ -1,0 +1,41 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.parallax {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    height: 100%; 
+}
+
+.img1 { background-image: url('https://cdn-useast1.kapwing.com/static/templates/crying-cat-meme-template-full-719a53dc.webp'); }
+.img2 { background-image: url('https://static.boredpanda.com/blog/wp-content/uploads/2025/10/funny-cat-memes-go-hard-cover_675.jpg'); }
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.black-block {
+    color: #ddd;
+    background-color: #000;
+    padding: 50px 80px;
+    text-align: center;
+}

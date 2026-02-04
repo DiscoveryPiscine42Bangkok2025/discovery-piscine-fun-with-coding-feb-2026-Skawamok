@@ -1,0 +1,41 @@
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    background-color: #00843d;
+    display: inline-flex;
+    border-radius: 8px;
+}
+
+.navbar > li > a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.submenu {
+    display: none;      
+    position: absolute;
+    background-color: #00843d;
+    list-style: none;
+    padding: 0;
+    min-width: 200px;
+    border-radius: 0 0 8px 8px;
+}
+
+.submenu li a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.dropdown:hover .submenu {
+    display: block;    
+}
+
+.submenu li:hover {
+    background-color: #005f2c;
+}

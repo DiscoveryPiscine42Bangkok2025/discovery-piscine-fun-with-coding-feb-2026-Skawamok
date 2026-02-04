@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Explode this balloon</title>
     <style>
         body {
@@ -31,12 +30,6 @@
         let colorIndex = 0;
         let size = 200;
 
-        function updateBalloon() {
-            balloon.style.width = size + 'px';
-            balloon.style.height = size + 'px';
-            balloon.style.backgroundColor = colors[colorIndex];
-        }
-
         balloon.addEventListener('click', function() {
             size += 10;
             
@@ -50,6 +43,13 @@
             updateBalloon();
         });
 
+        function updateBalloon() {
+            balloon.style.width = size + 'px';
+            balloon.style.height = size + 'px';
+            balloon.style.backgroundColor = colors[colorIndex];
+        }
+
+
         balloon.addEventListener('mouseleave', function() {
             if (size > 200) {
                 size -= 5;
@@ -59,6 +59,7 @@
 
             updateBalloon();
         });
+        
     </script>
 </body>
 </html>
