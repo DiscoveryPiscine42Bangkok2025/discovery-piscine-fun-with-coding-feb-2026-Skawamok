@@ -1,0 +1,113 @@
+/* ตั้งค่าพื้นฐาน */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* ปิด Scrollbar สำหรับหน้าแรก */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* เต็มความสูงหน้าจอ */
+}
+
+/* ตั้งค่าพื้นฐานของทั้งสองฝั่ง */
+.split {
+    flex: 1; /* แบ่งครึ่งเท่ากัน */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
+/* จัดการรูปภาพพื้นหลัง */
+.bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.3s ease;
+    z-index: 1;
+}
+
+/* ส่วน Login Popup (ซ่อนอยู่ตอนแรก) */
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    opacity: 0; /* ซ่อน */
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    background: rgba(0, 0, 0, 0.6); /* พื้นหลังสีดำจางๆ เพื่อให้อ่านง่าย */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* --- Effect เมื่อเอาเมาส์ไปวาง (Hover) --- */
+.split:hover .bg-img {
+    filter: blur(8px); /* เบลอรูปภาพ */
+    transform: scale(1.1); /* ขยายรูปนิดหน่อย */
+}
+
+.split:hover .content {
+    opacity: 1; /* แสดง Popup */
+    transform: translateY(0);
+}
+
+/* ตกแต่งช่อง Input และปุ่ม */
+input {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e84118;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    height: 10px;
+}
+
+.name-btn {
+    padding: 15px 30px;
+    background-color: transparent; /* พื้นหลังใส */
+    border: 2px solid white;      /* กรอบสีขาว */
+    color: white;
+    font-size: 1.2rem;            /* ตัวหนังสือใหญ่ขึ้น */
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 50px;          /* ทำเป็นปุ่มมนๆ */
+    transition: all 0.3s ease;
+    text-transform: uppercase;    /* ตัวพิมพ์ใหญ่ทั้งหมด (Optional) */
+}
+
+.name-btn:hover {
+    background-color: white;      /* พอเอาเมาส์ชี้ พื้นหลังเป็นสีขาว */
+    color: black;                 /* ตัวหนังสือเปลี่ยนเป็นสีดำ */
+    transform: scale(1.05);       /* ขยายปุ่มนิดหน่อย */
+}
+
+.content h2 {
+    margin-bottom: 20px;
+}
