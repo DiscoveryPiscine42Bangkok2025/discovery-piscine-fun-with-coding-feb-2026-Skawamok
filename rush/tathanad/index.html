@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tathanad Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Tathanad Portfolio</div>
+        <div class="menu">
+            <a href="../index.html" class="nav-item home-btn">Home</a>
+            <a href="#about" class="nav-item">About</a>
+            <a href="#activities" class="nav-item">Activities</a>
+            <a href="#certificate" class="nav-item">Certificate</a>
+            <a href="#contact" class="nav-item">Contact</a>
+        </div>
+    </nav>
+
+    <section id="hero" class="bg-grid-pattern">
+        <div class="hero-text hidden">
+            <h1 class="big-name">TANAWATR</h1>
+            <h2 class="surname">THANADEEWANJONGSIRI</h2>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="hidden" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+            <h2 class="section-title text-dark">About <span class="text-orange">Me</span></h2>
+            <div class="about-container">
+                <div class="about-img">
+                    <img src="img/profiles.png" alt="Profile">
+                </div>
+                <div class="about-info">
+                    <h3>My Name Is <span class="text-orange">Tanawatr Thanadeewanjongsiri</span></h3>
+                    <ul>
+                        <li><strong>Nickname :</strong> Mo</li>
+                        <li><strong>Age :</strong> 20 Years Old</li>
+                        <li><strong>Work :</strong> Student</li>
+                        <li><strong>University :</strong> KMITL</li>
+                        <li><strong>Major :</strong> Computer Science</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" class="bg-grid-pattern">
+        <div class="hidden" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+            <h2 class="section-title">Activities</h2>
+            <div class="grid-4">
+                <div class="card" onclick="openImage(this)">
+                    <img src="img/valoCs2.jpg" alt="Valorant">
+                    <div class="overlay"><div class="text"><h3>มีส่วนร่วมในการควบคุมจอ Monitor ในการแข่งขัน Valorant วันวิทยาศาสตร์</h3></div></div>
+                </div>
+                <div class="card" onclick="openImage(this)">
+                    <img src="img/CiraCore.png" alt="Cira Core">
+                    <div class="overlay"><div class="text"><h3>เข้าร่วมการเขียนโค้ดเพื่อควบคุมการทำงานของรถหุ่นยนต์</h3></div></div>
+                </div>
+                <div class="card" onclick="openImage(this)">
+                    <img src="img/WorkshopLowCode.png" alt="Workshop">
+                    <div class="overlay"><div class="text"><h3>เข้าร่วมกิจกรรม K-Engineering World Tour and Workshop 2023</h3></div></div>
+                </div>
+                <div class="card" onclick="openImage(this)">
+                    <img src="img/Futsal.png" alt="Futsal">
+                    <div class="overlay"><div class="text"><h3>เข้าร่วมกิจกรรม Futsal RWB Championship 2022</h3></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificate">
+        <div class="hidden" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+            <h2 class="section-title text-dark">Certificate</h2>
+            <div class="grid-12">
+                <div class="card" onclick="openImage(this)"><img src="img/CertificateKEn.png"><div class="overlay"><div class="text">K-Engineering World Tour</div></div></div>
+                <div class="card" onclick="openImage(this)"><img src="img/CertificateWebCE.png"><div class="overlay"><div class="text">Web Programming Metaverse</div></div></div>
+                <div class="card" onclick="openImage(this)"><img src="img/CertificateFluid.png"><div class="overlay"><div class="text">กลศาสตร์ของไหล</div></div></div>
+                <div class="card" onclick="openImage(this)"><img src="img/CertificateDeep.png"><div class="overlay"><div class="text">Deep Learning</div></div></div>
+                <div class="card" onclick="openImage(this)"><img src="img/CertificatePython.png"><div class="overlay"><div class="text">Python Programming</div></div></div>
+                <div class="card" onclick="openImage(this)"><img src="img/CertificateOpenHouse.png"><div class="overlay"><div class="text">Open house KMITL</div></div></div>
+                <div class="card" onclick="openImage(this)"><img src="img/CertificateDawnOfFuture.png"><div class="overlay"><div class="text">The dawn of the future</div></div></div>
+                <div class="card" onclick="openImage(this)"><img src="img/CertificateCiraCoreCS.png"><div class="overlay"><div class="text">Workshop Low code</div></div></div>
+                <div class="card" onclick="openImage(this)"><img src="img/CertificateBanyai.png"><div class="overlay"><div class="text">การบรรยายพิเศษ</div></div></div>
+                <div class="card" onclick="openImage(this)"><img src="img/CertificateSaminar.png"><div class="overlay"><div class="text">Seminar Blockchain</div></div></div>
+                <div class="card" onclick="openImage(this)"><img src="img/CertificateRobot.png"><div class="overlay"><div class="text">Robot Coding</div></div></div>
+                <div class="card" onclick="openImage(this)"><img src="img/CertificateBuissness.png"><div class="overlay"><div class="text">SET Business Sustainability</div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-grid-pattern">
+        <div class="contact-content hidden">
+            <h2 class="section-title handwriting">Contacts</h2>
+            <div class="contact-list">
+                <div class="c-item"><i class="fas fa-phone"></i> 094-680-3695</div>
+                <div class="c-item"><i class="fab fa-facebook"></i> Tanawatr Tanawat </div>
+                <div class="c-item"><i class="fab fa-github"></i> Skawamok</div>
+                <div class="c-item"><i class="fas fa-envelope"></i> 67050228@kmitl.ac.th</div>
+            </div>
+        </div>
+        <footer>COPYRIGHT © Tathanad 2026 All Right Reserved</footer>
+    </section>
+
+    <div id="lightbox-modal" class="lightbox" onclick="closeImage()">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Full Image">
+    </div>
+
+    <script>
+        // 1. Lightbox Logic
+        function openImage(cardElement) {
+            const imgElement = cardElement.querySelector('img');
+            const src = imgElement.src;
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = src;
+            const lightbox = document.getElementById('lightbox-modal');
+            lightbox.classList.add('active');
+        }
+
+        function closeImage() {
+            const lightbox = document.getElementById('lightbox-modal');
+            lightbox.classList.remove('active');
+        }
+
+        // 2. Scroll Animation Logic (Observer)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show'); // เติม class show เมื่อเลื่อนมาเจอ
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+
+</body>
+</html>
