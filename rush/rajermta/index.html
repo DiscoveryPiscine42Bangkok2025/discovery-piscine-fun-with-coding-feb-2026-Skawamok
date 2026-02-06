@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAJERMTA PORTFOLIO</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+
+    <nav class="custom-navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#hero" class="nav-logo-link">
+                    RAJERMTA<br>PORTFOLIO
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-item"><span>Home</span></a>
+                <a href="#profile" class="nav-item"><span>Profile</span></a>
+                <a href="#experience" class="nav-item"><span>Experience</span></a>
+                <a href="#contact" class="nav-item"><span>Contact</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-split">
+        <div class="hero-content">
+            <h1 class="display-2 fw-bold text-orange">HELLO!</h1>
+            <hr class="dashed-divider">
+            <p class="text-white fs-4 mt-3">Welcome to my portfolio website</p>
+        </div>
+        
+        <div class="hero-image-bg">
+            <img src="img/me_3.png" alt="Rapeepat">
+        </div>
+    </section>
+
+    <section id="profile" class="profile-split-section">
+        <div class="profile-half left-half">
+            <img src="img/me_1.png" alt="Profile Picture">
+        </div>
+
+        <div class="profile-half right-half" onclick="toggleProfileInfo()">
+            <div class="trigger-content">
+                <h2 class="who-am-i-text">WHO<br>AM<br>I ?</h2>
+                <p class="click-hint">( Click Me! )</p>
+            </div>
+        </div>
+
+        <div id="profile-panel" class="slide-panel">
+            <button class="panel-close-btn" onclick="toggleProfileInfo()">×</button>
+            
+            <div class="panel-content">
+                <h3 class="text-orange fw-bold mb-4 display-6">PROFILE INFO</h3>
+                <ul class="info-list">
+                    <li>
+                        <span class="label">Name :</span> 
+                        <span class="value">Rapeepat Jermta</span>
+                    </li>
+                    <li>
+                        <span class="label">Nickname :</span> 
+                        <span class="value">Tonpai</span>
+                    </li>
+                    <li>
+                        <span class="label">Education :</span>
+                        <span class="value">Department of Computer Science,<br>Faculty of Science</span>
+                    </li>
+                    <li>
+                        <span class="label">Hobbies :</span>
+                        <span class="value">Playing Basketball,<br>Playing Guitar</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-padding">
+        <div class="container">
+            <h2 class="text-center display-4 fw-bold text-orange mb-5">EXPERIENCE</h2>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="work-item" onclick="openModal(1)">
+                        <img src="img/cer_1.png" alt="Work 1">
+                        <div class="work-overlay">
+                            <h3>Robot</h3>
+                            <p>Click for details</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="work-item" onclick="openModal(2)">
+                        <img src="img/cer_2.png" alt="Work 2">
+                        <div class="work-overlay">
+                            <h3>Robot</h3>
+                            <p>Click for details</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="work-item" onclick="openModal(3)">
+                        <img src="img/mini.png" alt="Work 3">
+                        <div class="work-overlay">
+                            <h3>Mini Project</h3>
+                            <p>Click for details</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="simpleModal" class="modal-backdrop" onclick="closeModal(event)">
+            <div class="modal-content">
+                <span class="modal-close-btn" onclick="closeModal(event)">&times;</span>
+                <h2 id="modalTitle" class="text-orange mb-3">Project Title</h2>
+                <img id="modalImg" src="" class="img-fluid mb-3 rounded" alt="Project Detail">
+                <p id="modalDesc" class="text-white-50">Description goes here...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container text-center">
+            
+            <h2 class="neon-title mb-5">CONTACT ME</h2>
+
+            <div class="contact-container">
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Tel : 061-1085750</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram : @rapeeo_o</span>
+                </div>
+
+                <a href="https://github.com/HESPERzLabs/discovery-piscine-fun-with-coding-feb-2026-HESPERzLabs.git" target="_blank" class="contact-item link-active">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Github : HESPERzLabs</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square ms-2 fs-6" style="opacity: 0.5;"></i> 
+                </a>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>E-mail : 67050466@kmitl.ac.th</span>
+                </div>
+            </div>
+            
+            <div class="footer-credit mt-5 text-white-50">
+                <small>&copy; 2026 My Portfolio.</small>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

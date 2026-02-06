@@ -2,7 +2,6 @@ async function quickLogin(selectedUser) {
     const side = (selectedUser === 'tathanad') ? 'left' : 'right';
     const errorElement = document.getElementById(`error-${side}`);
     
-    // 🔥 จุดที่แก้: ให้ลิ้งค์เข้าไปในโฟลเดอร์ของคนนั้นๆ แล้วเปิดไฟล์ index.html
     const redirectUrl = `${selectedUser}/index.html`; 
 
     try {

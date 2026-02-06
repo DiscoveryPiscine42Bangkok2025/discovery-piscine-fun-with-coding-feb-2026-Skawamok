@@ -123,7 +123,6 @@
     </div>
 
     <script>
-        // Lightbox
         function openImage(cardElement) {
             const imgElement = cardElement.querySelector('img');
             const lightboxImg = document.getElementById('lightbox-img');
@@ -135,7 +134,6 @@
             document.getElementById('lightbox-modal').classList.remove('active');
         }
 
-        // Scroll 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) entry.target.classList.add('show');
