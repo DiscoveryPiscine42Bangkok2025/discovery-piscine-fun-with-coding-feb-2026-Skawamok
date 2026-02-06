@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokpok Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Pokpok</div>
+        <div class="menu">
+            <a href="#" class="nav-item" onclick="quickLogin('tathanad')">tathanad</a>
+            <a href="#" class="nav-item" onclick="quickLogin('rajermta')">rajermta</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="split left">
+            <img src="image/ProfileTanawatr.png" alt="Tathanad" class="bg-img">
+            <div class="content">
+                <h2>Tanawatr Thanadeewanjongsiri</h2>
+                <div class="login-popup">
+                    <p>View Portfolio</p>
+                    <button class="name-btn" onclick="quickLogin('tathanad')">ENTER</button>
+                    <p id="error-left" class="error"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="split right">
+            <img src="image/rajermta.jpg" alt="Rajermta" class="bg-img">
+            <div class="content">
+                <h2>Rajermta</h2>
+                <div class="login-popup">
+                    <p>View Portfolio</p>
+                    <button class="name-btn" onclick="quickLogin('rajermta')">ENTER</button>
+                    <p id="error-right" class="error"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
