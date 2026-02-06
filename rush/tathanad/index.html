@@ -56,20 +56,20 @@
             <h2 class="section-title">Activities</h2>
             <div class="grid-4">
                 <div class="card" onclick="openImage(this)">
-                    <img src="img/valoCs2.jpg" alt="Valorant">
+                    <img src="img/valoCs2.jpg">
                     <div class="overlay"><div class="text"><h3>มีส่วนร่วมในการควบคุมจอ Monitor ในการแข่งขัน Valorant วันวิทยาศาสตร์</h3></div></div>
                 </div>
                 <div class="card" onclick="openImage(this)">
-                    <img src="img/CiraCore.png" alt="Cira Core">
+                    <img src="img/CiraCore.png">
                     <div class="overlay"><div class="text"><h3>เข้าร่วมการเขียนโค้ดเพื่อควบคุมการทำงานของรถหุ่นยนต์</h3></div></div>
                 </div>
                 <div class="card" onclick="openImage(this)">
-                    <img src="img/WorkshopLowCode.png" alt="Workshop">
-                    <div class="overlay"><div class="text"><h3>เข้าร่วมกิจกรรม K-Engineering World Tour and Workshop 2023</h3></div></div>
+                    <img src="img/WorkshopLowCode.png">
+                    <div class="overlay"><div class="text"><h3>เข้าร่วมกิจกรรม K-Engineering World Tour and Workshop 2023 Web Programming</h3></div></div>
                 </div>
                 <div class="card" onclick="openImage(this)">
-                    <img src="img/Futsal.png" alt="Futsal">
-                    <div class="overlay"><div class="text"><h3>เข้าร่วมกิจกรรม Futsal RWB Championship 2022</h3></div></div>
+                    <img src="img/Futsal.png">
+                    <div class="overlay"><div class="text"><h3>เข้าร่วมกิจกรรม Futsal RWB Championship 2022 ของงานโรงเรียน</h3></div></div>
                 </div>
             </div>
         </div>
@@ -100,9 +100,18 @@
             <h2 class="section-title handwriting">Contacts</h2>
             <div class="contact-list">
                 <div class="c-item"><i class="fas fa-phone"></i> 094-680-3695</div>
-                <div class="c-item"><i class="fab fa-facebook"></i> Tanawatr Tanawat </div>
-                <div class="c-item"><i class="fab fa-github"></i> Skawamok</div>
-                <div class="c-item"><i class="fas fa-envelope"></i> 67050228@kmitl.ac.th</div>
+                
+                <a href="https://www.facebook.com/tanawatr.tanawat" target="_blank" class="c-item">
+                    <i class="fab fa-facebook"></i> Tanawatr Tanawat
+                </a>
+
+                <a href="https://github.com/Skawamok" target="_blank" class="c-item">
+                    <i class="fab fa-github"></i> Skawamok
+                </a>
+
+                <a href="mailto:67050228@kmitl.ac.th" class="c-item">
+                    <i class="fas fa-envelope"></i> 67050228@kmitl.ac.th
+                </a>
             </div>
         </div>
         <footer>COPYRIGHT © Tathanad 2026 All Right Reserved</footer>
@@ -114,32 +123,25 @@
     </div>
 
     <script>
-        // 1. Lightbox Logic
+        // Lightbox
         function openImage(cardElement) {
             const imgElement = cardElement.querySelector('img');
-            const src = imgElement.src;
             const lightboxImg = document.getElementById('lightbox-img');
-            lightboxImg.src = src;
-            const lightbox = document.getElementById('lightbox-modal');
-            lightbox.classList.add('active');
+            lightboxImg.src = imgElement.src;
+            document.getElementById('lightbox-modal').classList.add('active');
         }
 
         function closeImage() {
-            const lightbox = document.getElementById('lightbox-modal');
-            lightbox.classList.remove('active');
+            document.getElementById('lightbox-modal').classList.remove('active');
         }
 
-        // 2. Scroll Animation Logic (Observer)
+        // Scroll 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show'); // เติม class show เมื่อเลื่อนมาเจอ
-                }
+                if (entry.isIntersecting) entry.target.classList.add('show');
             });
         });
-
-        const hiddenElements = document.querySelectorAll('.hidden');
-        hiddenElements.forEach((el) => observer.observe(el));
+        document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
     </script>
 
 </body>
